@@ -140,3 +140,5 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+speech/audiofiles/.DS_Store
+.DS_Store
