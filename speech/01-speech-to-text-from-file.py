@@ -1,12 +1,14 @@
 import os
 import time
 import azure.cognitiveservices.speech as speechsdk
-from dotenv import load_dotenv
+from dotenv import load_dotenv # pip install python-dotenv
 
-load_dotenv()
+load_dotenv() #loads the .env (environment) variables into the python file
 
+# "done" is a boolean to keep track of the stop event of a callback being triggered to stop continuous recognition , inititated to false
 done = False
 
+# an array to store the final output from the recognition
 output = []
 
 def stop_cb(evt):
@@ -17,14 +19,20 @@ def stop_cb(evt):
 
 # Create an instance of a speech config with the provided subscription
 # key and service region. Then create an audio configuration to load
-# the audio from file rather than from microphone
+# the audio from a file rather than from microphone
 
 # A recognizer is then created with the given settings.
 
 speech_key, service_region = os.getenv('SPEECH_RESOURCE_KEY'), "westus"
 speech_config = speechsdk.SpeechConfig(subscription=speech_key, region=service_region)
 
-filename=input("Enter the path to an audio file(.wav) : ")
+# The name of the file is stored in a variable
+
+filename=input("Enter the path to an audio file (.wav) : ")
+
+# This if statement just checks if the first character of our input is
+# either a ' or a " implying the input file is of format "file.wav" or
+# 'file.wav' in which case we remove the enclosing quotes
 
 if(filename[0] in ["'","\""]):
     filename=filename[1:-1]
@@ -64,8 +72,7 @@ print("Do you wish to save the output in a file [Y/N] : ")
 choice = input()
 
 if(choice in ['y','Y']):
-    print("Enter the name of the output file : ")
-    name = input()
+    name = input("Enter the name of the output file : ")
     out = open(f'./Output/{name}.txt', 'w')
     for sentence in output:
         out.write(sentence + "\n")
