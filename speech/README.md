@@ -1,6 +1,6 @@
 # Azure Cognitive: Speech QuickStart
 
-TODO: Add description
+Convert audio to text, perform speech translation and text-to-speech with the unified Speech services
 
 ## Code Workflow for Speech to Text
 

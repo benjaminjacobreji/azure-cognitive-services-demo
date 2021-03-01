@@ -1,6 +1,6 @@
-Azure Cognitive Services: Face API
+# Azure Cognitive Services: Face API
 
-TODO: Add description
+An AI service that analyzes faces in images
 
 ## Code Workflow
 
@@ -11,14 +11,10 @@ TODO: Add description
 5. Identify a face
 6. Verify faces
 
-## 01. Single Face Detection
+## 01. Quickstart
 
-This program will only identify one face from the image no matter how many faces exist in the photo.
+This program will only identify faces from the image.
 
-## 02. Multiple Face Detection
-
-This program will identify all faces from the image.
-
-## 03. Face Recognition
+## 02. Face Recognition
 
 This program will identify a face from an image. Then it'll be able to identify that face from a group of faces.

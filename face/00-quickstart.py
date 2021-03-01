@@ -16,8 +16,10 @@ face_client = FaceClient(ENDPOINT, CognitiveServicesCredentials(KEY))
 single_face_image_path = 'images/test-image-person-group.jpg'
 single_image_name = os.path.basename(single_face_image_path)
 
+# Open Image
 img = open(single_face_image_path, 'r+b')
 
+# Azure API call
 detected_faces = face_client.face.detect_with_stream(image=img, detection_model='detection_03')
 
 # Check if the returned response has detected faces in it
@@ -44,6 +46,11 @@ def getRectangle(faceDictionary):
 print('Drawing rectangle around face...')
 img = Image.open(single_face_image_path)
 draw = ImageDraw.Draw(img)
+
+# Single Face
+# face = detected_faces[0]
+
+# Multiple Face
 for face in detected_faces:
     draw.rectangle(getRectangle(face), outline='red')
 
