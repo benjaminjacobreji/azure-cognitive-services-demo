@@ -9,7 +9,7 @@ Gaurav Gosain ([Gaurav-Gosain](https://github.com/Gaurav-Gosain))
 
 [Azure Cognitive Services](https://azure.microsoft.com/en-us/services/cognitive-services/) by [Microsoft](https://www.microsoft.com/)
 
-## For issues
+### For issues
 
 Please create an issue here: [Create New Issue](https://github.com/benjaminjacobreji/azure-cognitive-services-demo/issues/new)  
 Before creating a new issues, check if an issue has already been created for a similiar problem at [Issues](https://github.com/benjaminjacobreji/azure-cognitive-services-demo/issues).
